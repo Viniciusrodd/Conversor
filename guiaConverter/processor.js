@@ -11,7 +11,7 @@ class Processor{
         var rows = [];
 
         dataVar.forEach((row) =>{
-            var rowSplit = row.split(',');
+            var rowSplit = row.split(';');
             rows.push(rowSplit);
         })
 
