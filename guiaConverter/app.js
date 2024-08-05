@@ -11,7 +11,8 @@ async function main(){
     var dadosProcessados = Processor.Process(dados);
 
     var usuarios = new Table(dadosProcessados);
-    console.log(usuarios)
+    console.log(`The table have these count of Lines: ${usuarios.rowCount}`)
+    console.log(`The table have these count of Columns: ${usuarios.columnCount}`)
     
 }
 main();
