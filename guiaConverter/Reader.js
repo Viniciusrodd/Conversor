@@ -25,7 +25,7 @@ e não apenas retornar um console.log dos dados
 
 class Reader{
     constructor(){
-        this.reader = util.promisify(fs.readFile)
+        this.reader = util.promisify(fs.readFile)//readFile q era callback vira promisse
     }
 
     async read(filePath){
