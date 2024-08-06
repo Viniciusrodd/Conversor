@@ -5,10 +5,14 @@ var Processor = require('./Classes/Processor');
 var Table = require('./Classes/table');
 var htmlParser = require('./Classes/htmlParser');
 var Writer = require('./Classes/Writer');
+var PdfWriter = require('./Classes/pdfWriter');
+
+
 
 //INSTÂNCIAS
 var leitor = new Reader();
 var escritor = new Writer();
+
 
 
 //Recebendo dados da função Read() graças ao promisify()
@@ -24,6 +28,6 @@ async function main(){
         console.log(html);
 
     escritor.Write(`${Date.now()}.html`, html);
-
+    PdfWriter.WritePdf(`${Date.now()}.pdf`, html);
 }
 main();
